@@ -9,9 +9,9 @@ def shopping(shop_file):
         print(lines)
     for line in lines[2:]:
         if len(line)>0:
-            name, price = line.strip().split()
-        if price != '점수':
-            shop_dict[name] = price
+            name, num = line.strip().split()
+        if num != '점수':
+            shop_dict[name] = num
 
     return shop_dict
 
@@ -27,9 +27,9 @@ def item_price(shop_file, item):
         lines =lines.split("\n")
     for line in lines[2:]:
         if len(line)>0:
-            name, price = line.strip().split()
-        if price != '점수':
-            shop_dict[name] = price
+            name, num = line.strip().split()
+        if num != '점수':
+            shop_dict[name] = num
 
 
     return(shop_dict[item])
